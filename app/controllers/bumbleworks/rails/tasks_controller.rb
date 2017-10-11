@@ -1,6 +1,6 @@
 class Bumbleworks::Rails::TasksController < BumbleworksController
-  before_filter :load_and_authorize_task, :except => :index
-  before_filter :load_entity
+  before_action :load_and_authorize_task, :except => :index
+  before_action :load_entity
 
   def show
     render :prefixes => template_prefixes
